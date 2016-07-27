@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+<input/>
+<button>Compare com o meu segredo!</button>
+
+<script>
+    var segredo = Math.round(Math.randon() * 10);
+    var input = document.querySelector("input");
+    var button = document.querySelector("button");
+
+    input.focus();
+
+
+    function verifica() {
+        if (segredo == input.value) {
+            alert("Parabéns! Você acertou o número secreto");
+        } else {
+            alert("Infelizmente você errou!");
+        }
+        input.value = "";
+        input.focus();
+    }
+    button.onclick = verifica;
+
+    //button.onclick = verifica(); com() ele chama a função sem ele chma tudo que tem na função
+</script>
+
+</html>

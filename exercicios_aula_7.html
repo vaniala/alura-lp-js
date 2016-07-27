@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+
+<script>
+    function pulaLinha() {
+        document.write("<br />")
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    mostra("Com for");
+
+    for (var i = 2; i <= 100; i += 2) {
+        document.write(i + " ");
+    }
+
+    pulaLinha();
+
+    var contador = 2;
+    mostra("Com while");
+
+    while (contador <= 100) {
+        document.write(contador + " ");
+        contador += 2;
+    }
+    pulaLinha();
+    mostra("FIM");
+
+    mostra("Todos o números entre 30 a 40, exceto 33 e 37!")
+
+    for (var i = 30; i < 41; i++) {
+        if (i == 33 || i == 37) {
+            continue;
+        }
+        document.write(i + " ");
+    }
+    pulaLinha();
+    mostra("FIM");
+
+    mostra("Imprima em ordem decrescente todos os números entre 20 e 0, incluindo os limites!");
+
+    for (var i = 20; i >= 0; i--) {
+        document.write(i + " ");
+    }
+    pulaLinha();
+    mostra("FIM");
+
+    var idade = parseInt(prompt("Digite sua idade"));
+
+    while (isNaN(idade)) {
+        idade = parseInt(prompt("Digite sua idade"));
+    }
+
+    alert("Sua idade é " + idade);
+
+    var numero = parseFloat("12.13");
+    mostra(numero);
+
+    var totalDeEventos = parseInt(prompt("Informe o total de eventos"));
+
+    var contador = 1;
+    var totalGastoComEventos = 0;
+
+    while (contador <= totalDeEventos) {
+
+        var gasto = parseFloat(prompt("Informe total gasto com evento"));
+        totalGastoComEventos = totalGastoComEventos + gasto;
+        contador++;
+    }
+
+    var media = totalGastoComEventos / totalDeEventos;
+
+    mostra("A média de gastos é " + media);
+
+
+    var resposta = ""; // ainda não tem a resposta
+
+    while (true) {
+
+        resposta = prompt("Qual é seu nome?");
+
+        if (resposta == "SAIR") {
+
+            break;
+        }
+    }
+
+    mostra("FIM");
+
+    var i = 0;
+    while (i < 10) {
+        alert("O resultado é " + (2 * i));
+        i++;
+    }
+
+    for (var i = 0; i < 10; i++) {
+        alert("O resultado é " + (2 * i));
+    }
+    mostra("FIM");
+
+    var loginCadastrado = "alura";
+    var senhaCadastrada = "alura321";
+
+
+    for (var i = 0; i < 3; i++) {
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+        if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+            mostra("Bem-vindo ao sistema " + loginInformado);
+            break;
+        } else {
+            mostra("Login inválido. Tente novamente");
+        }
+
+    }
+</script>
+
+</html>

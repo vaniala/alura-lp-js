@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<script>
+    function pulaLinha() {
+        document.write("<br />");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura) {
+
+        //var imc = peso / (altura * altura);
+        //return imc;
+        return peso / (altura * altura);
+    }
+
+    //var imcFlavio = calculaImc(100,1.75);
+    //var imcAmigo = calculaImc(60,1.5);
+    //var totalImc = imcFlavio + imcAmigo;
+
+    // var totalImc = calculaImc(100,1.75) + calculaImc(60,1.5);
+    //
+    // document.write("A soma dos imc's é: " + totalImc);
+    // mostra(imcFlavio);
+    // mostra(imcAmigo);
+
+    var nome = prompt("Qual o seu nome? ")
+    var pesoInformado = prompt("Informe seu peso")
+    var alturaInformada = prompt("Informe a sua altura");
+
+
+    var imc = calculaImc(pesoInformado, alturaInformada);
+    mostra(nome + "o seu imc calculado é: " + imc);
+
+
+    if (imc < 18.5) {
+        mostra("Seu IMC indica que você está ABAIXO do peso.");
+    } else if (imc > 35) {
+        mostra("Seu IMC indica que você está ACIMA do peso.");
+    } else {
+        mostra("OK! Seu IMC está entre os dois limites.");
+    }
+</script>
+
+</html>

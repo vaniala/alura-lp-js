@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<script>
+    function fazPegadinha() {
+        alert("Olá");
+        alert("amiga!");
+        alert("Tá");
+        alert("de");
+        alert("saco cheio");
+        alert("Em ficar");
+        alert("Clicando em");
+        alert("Ok");
+        alert("né?");
+    }
+
+    //fazPegadinha();
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var titulo = "Bem-vindo ao meu programa!";
+
+    mostra("<h1>" + titulo + "</h1>");
+
+    mostra("Vocês não sabem o que tive que aprender para fazer isso!");
+
+    mostra("Contudo, assistindo os vídeos e estudando ...")
+
+    mostra("Eu vou mais longe!");
+
+    function exibeAlerta(mensagem) {
+        alert("***" + mensagem + "***");
+    }
+
+    var idade1 = 10;
+    var idade2 = 20;
+    var idade3 = 30;
+    var totalIdades = idade1 + idade2 + idade3;
+    var mediaIdades = totalIdades / 3;
+
+    exibeAlerta("Total de de idades é " + totalIdades);
+    exibeAlerta("A média das idades é " + mediaIdades);
+
+
+    function mostra2(frase) {
+
+        document.write("**************************************************");
+        pulaLinha();
+        document.write(frase);
+        pulaLinha();
+
+    }
+
+    mostra2("BEM-VINDO AO MEU PROGRAMA");
+    mostra2("ELE REALMENTE FUNCIONA");
+    mostra2("EU USEI FUNÇÃO PARA FAZER ISSO");
+
+
+    function exibeTitulo(titulo) {
+        document.write("<h1>" + titulo + "</h1>");
+    }
+
+    function exibeParagrafo(paragrafo) {
+        document.write("<p>" + paragrafo + "</p>");
+    }
+
+    // pede para alguém ler daqui em diante e veja se ele entende o que esta sendo feito
+    exibeTitulo("Bem-vindos");
+    exibeParagrafo("Este é um simples programa");
+
+    var minhaIdade = 26;
+    var idadeMeuIrmao = 30
+
+    var diferencaDeIdade = minhaIdade - idadeMeuIrmao;
+
+    function mostra3(frase) {
+        document.write("Nossa diferença de idade é " + frase);
+        pulaLinha();
+    }
+
+    mostra3(diferencaDeIdade);
+
+    var anoHoje = 2016;
+    var anoInicial = 1500;
+    var idadeMediaQuandoTemFilhos = 28;
+    var diferencaDeAnos = anoHoje - anoInicial;
+
+    var quantidadeDeGeracoes = Math.round(diferencaDeAnos / idadeMediaQuandoTemFilhos);
+
+
+    function mostra4(frase) {
+        document.write(frase + quantidadeDeGeracoes + " gerações");
+        pulaLinha();
+    }
+
+    mostra4("Já passaram ")
+
+    function pulaLinha2() {
+
+        document.write("<br>");
+        document.write("<hr />");
+        document.write("<br>");
+    }
+
+    function mostra5(frase) {
+        document.write("<big>" + frase + "</big>");
+        pulaLinha2();
+    }
+
+    var ano = 2012;
+    mostra5("Eu nasci em : " + (ano - 25));
+    mostra5("Adriano nasceu em : " + (ano - 26));
+    mostra5("Paulo nasceu em : " + (ano - 32));
+</script>
+
+</html>

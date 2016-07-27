@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+
+<script>
+    function pulaLinha() {
+        document.write("<br />")
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var anoDaCopa = parseInt(prompt("Informe o ano inicial"));;
+    var limite = parseInt(prompt("Qual é o ano limite?"));
+
+
+    while (anoDaCopa <= limite) {
+        alert("Teve copa em " + anoDaCopa);
+        anoDaCopa += 4;
+    }
+
+    mostra("Ufa! Esses foram os anos de copa até 2014.");
+
+    for (var i = 1; i <= 10; i++) {
+        mostra("7 x " + i + " = " + (7 * i));
+    }
+</script>
+
+</html>

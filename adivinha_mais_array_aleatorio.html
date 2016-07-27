@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<html>
+<input/>
+<button>Compare com o meu segredo!</button>
+
+<script>
+    function sorteia() {
+        return Math.round(Math.random() * 10);
+    }
+
+    var segredos = sorteiaNumeros(5);
+
+    function sorteiaNumeros(quantidade) {
+
+        var segredos = [];
+        var numero = 1;
+
+        while (numero <= quantidade) {
+
+            var numeroAleatorio = sorteia();
+
+            if (numeroAleatorio != 0) {
+                var achou = false;
+                for (var i = 0; i < segredos.length; i++) {
+                    if (segredos[i] == numeroAleatorio) {
+                        achou = true;
+                        break;
+                    }
+                }
+                if (!achou) {
+                    segredos.push(numeroAleatorio);
+                    numero++;
+                }
+            }
+        }
+
+        return segredos;
+    }
+    console.log(segredos);
+
+    var input = document.querySelector("input");
+    var button = document.querySelector("button");
+
+    input.focus();
+
+    function verifica() {
+
+        var achou = false;
+
+        for (var i = 0; i < segredos.length; i++) {
+            if (segredos[i] == input.value) {
+                alert("Parabéns! Você acertou o número secreto");
+                achou = true;
+                break;
+            }
+        }
+        if (!achou) {
+            alert("Infelizmente você errou!");
+        }
+        input.value = "";
+        input.focus();
+    }
+    button.onclick = verifica;
+
+    //button.onclick = verifica(); com() ele chama a função sem ele chma tudo que tem na função
+</script>
+
+</html>
